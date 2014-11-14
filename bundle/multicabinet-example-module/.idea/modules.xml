@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/multicabinet-example-module.iml" filepath="$PROJECT_DIR$/multicabinet-example-module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/example-gateway.iml" filepath="$PROJECT_DIR$/example-gateway.iml" />
     </modules>
   </component>
 </project>

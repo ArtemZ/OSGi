@@ -5,6 +5,7 @@ import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceRegistration;
 import ru.multicabinet.module.PaymentModuleData;
 import ru.multicabinet.module.api.PaymentGateway;
+import ru.multicabinet.module.option.ModuleOptionTemplate;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -36,23 +37,84 @@ public class ExampleGatewayService implements PaymentGateway, BundleActivator {
         return info;
     }
 
-    public Map<String, Map<String,Object>> getRequiredFormFields(){
+    public List<ModuleOptionTemplate> getPaymentGatewayOptions(){
+        List<ModuleOptionTemplate> paymentGatewayOptions = new ArrayList<ModuleOptionTemplate>();
 
-        Map<String, Map<String, Object>> requiredFields = new HashMap<String, Map<String, Object>>();
+        paymentGatewayOptions.add(new ModuleOptionTemplate() {
+            @Override
+            public String getOptionName() {
+                return "key";
+            }
 
-        Map<String, Object> key = new HashMap<String, Object>();
-        key.put("type", "text");
-        key.put("desc", "Secret key");
+            @Override
+            public String getDescription() {
+                return "Secret key";
+            }
 
+            @Override
+            public String getI18NDescriptionCode() {
+                return null;
+            }
 
-        Map<String, Object> purse = new HashMap<String, Object>();
-        purse.put("type", "text");
-        purse.put("desc", "Payee purse");
+            @Override
+            public String getValidator() {
+                return null;
+            }
 
-        requiredFields.put("key", key);
-        requiredFields.put("purse", purse);
+            @Override
+            public String getDefaultValue() {
+                return null;
+            }
 
-        return requiredFields;
+            @Override
+            public Boolean isRequired() {
+                return true;
+            }
+
+            @Override
+            public Boolean isAdminOnly() {
+                return true;
+            }
+        });
+
+        paymentGatewayOptions.add(new ModuleOptionTemplate() {
+            @Override
+            public String getOptionName() {
+                return "purse";
+            }
+
+            @Override
+            public String getDescription() {
+                return "Payee purse";
+            }
+
+            @Override
+            public String getI18NDescriptionCode() {
+                return null;
+            }
+
+            @Override
+            public String getValidator() {
+                return null;
+            }
+
+            @Override
+            public String getDefaultValue() {
+                return null;
+            }
+
+            @Override
+            public Boolean isRequired() {
+                return true;
+            }
+
+            @Override
+            public Boolean isAdminOnly() {
+                return true;
+            }
+        });
+
+        return paymentGatewayOptions;
     }
 
     @Override
@@ -77,11 +139,11 @@ public class ExampleGatewayService implements PaymentGateway, BundleActivator {
         Map<String, Map<String, String>> fields = new HashMap<String, Map<String, String>>();
         Map<String, String> key = new HashMap<String, String>();
         key.put("type", "hidden");
-        key.put("value", data.getFormFieldValue("key").toString());
+        key.put("value", data.getPaymentGatewayOption("key").getValue());
 
         Map<String, String> purse = new HashMap<String, String>();
         purse.put("type", "hidden");
-        purse.put("value", data.getFormFieldValue("purse").toString());
+        purse.put("value", data.getPaymentGatewayOption("purse").getValue());
 
         fields.put("key", key);
         fields.put("purse", purse);
