@@ -14,10 +14,12 @@ public class Activator implements BundleActivator {
     @Override
     public void start(BundleContext bundleContext) throws Exception {
         System.out.println("Starting with bundle context: " + bundleContext.toString());
+        BundleContextHolder.setContext(bundleContext);
     }
 
     @Override
     public void stop(BundleContext bundleContext) throws Exception {
         System.out.println("Stopping with bundle context: " + bundleContext.toString());
+        BundleContextHolder.removeContext();
     }
 }
