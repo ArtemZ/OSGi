@@ -55,7 +55,7 @@
     <file path="$PROJECT_DIR$/../../../multicabinet-module-api/src/main/java/ru/multicabinet/module/api/Module.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415467141693" ignored="false" />
     <file path="$PROJECT_DIR$/../../../multicabinet-module-api/src/main/java/ru/multicabinet/module/ModuleType.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415466425299" ignored="false" />
     <file path="$PROJECT_DIR$/../../../multicabinet-module-api/src/main/java/ru/multicabinet/module/PaymentModuleData.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415954901003" ignored="false" />
-    <file path="/ExampleServerModuleService.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415521819650" ignored="false" />
+    <file path="/ExampleServerModuleService.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415970422010" ignored="false" />
     <file path="$PROJECT_DIR$/../../../multicabinet-module-api/src/main/java/ru/multicabinet/module/option/ModuleOptionTemplate.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415550774834" ignored="false" />
     <file path="/ModuleOptionTemplate.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415550772703" ignored="false" />
     <file path="$PROJECT_DIR$/../../../multicabinet-module-api/src/main/java/ru/multicabinet/module/option/ModuleOption.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415552105964" ignored="false" />
@@ -141,10 +141,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExampleGatewayService.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ExampleGatewayService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/multicabinet/gateways/examplegateway/ExampleGatewayService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="145" column="75" selection-start="4046" selection-end="4046" vertical-scroll-proportion="0.5334797">
+            <state line="167" column="5" selection-start="4287" selection-end="4608" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#792#808#0" expanded="true" />
                 <element signature="e#999#1007#0" expanded="true" />
@@ -157,10 +157,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExampleServerModuleService.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ExampleServerModuleService.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/multicabinet/servermodules/exampleserver/ExampleServerModuleService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="22" selection-start="2973" selection-end="2973" vertical-scroll-proportion="0.0">
+            <state line="92" column="8" selection-start="3332" selection-end="3423" vertical-scroll-proportion="1.3501647">
               <folding />
             </state>
           </provider>
@@ -176,9 +176,9 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/ru/multicabinet/servermodules/exampleserver/ExampleServerModuleService.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ru/multicabinet/gateways/examplegateway/ExampleGatewayService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/multicabinet/servermodules/exampleserver/ExampleServerModuleService.java" />
       </list>
     </option>
   </component>
@@ -656,13 +656,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/multicabinet/servermodules/exampleserver/ExampleServerModuleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="22" selection-start="2973" selection-end="2973" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="21" selection-start="645" selection-end="645" vertical-scroll-proportion="0.0">
@@ -672,7 +665,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/multicabinet/gateways/examplegateway/ExampleGatewayService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="145" column="75" selection-start="4046" selection-end="4046" vertical-scroll-proportion="0.5334797">
+        <state line="167" column="5" selection-start="4287" selection-end="4608" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#792#808#0" expanded="true" />
             <element signature="e#999#1007#0" expanded="true" />
@@ -681,6 +674,13 @@
             <element signature="e#3737#3753#0" expanded="true" />
             <element signature="e#3914#3930#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/multicabinet/servermodules/exampleserver/ExampleServerModuleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="8" selection-start="3332" selection-end="3423" vertical-scroll-proportion="1.3501647">
+          <folding />
         </state>
       </provider>
     </entry>
