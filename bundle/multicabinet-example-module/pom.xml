@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>ru.multicabinet.gateways</groupId>
+    <artifactId>example-gateway</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>ru.multicabinet</groupId>
+            <artifactId>multicabinet-module-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.core</artifactId>
+            <version>4.3.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.compendium</artifactId>
+            <version>4.3.1</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <!--<Export-Package>ru.artemz.test.impl</Export-Package>-->
+                        <!--<Private-Package>ru.artemz.test.impl</Private-Package>-->
+                        <Import-Package>ru.multicabinet.module</Import-Package>
+                        <Import-Package>ru.multicabinet.module.api</Import-Package>
+                        <Bundle-SymbolicName>ru.multicabinet.gateways.example-gateway</Bundle-SymbolicName>
+                        <!--<Bundle-Activator>ru.artemz.test.impl.Activator</Bundle-Activator>-->
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    
+</project>
