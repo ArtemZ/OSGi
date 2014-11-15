@@ -5,7 +5,7 @@ import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceRegistration;
 import ru.multicabinet.module.PaymentModuleData;
 import ru.multicabinet.module.api.PaymentGateway;
-import ru.multicabinet.module.option.ModuleOptionTemplate;
+import ru.multicabinet.module.option.template.ModuleOptionTemplate;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

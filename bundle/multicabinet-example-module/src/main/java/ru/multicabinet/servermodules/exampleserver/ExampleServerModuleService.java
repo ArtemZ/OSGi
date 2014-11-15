@@ -4,10 +4,14 @@ import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceRegistration;
 import ru.multicabinet.module.ServerModuleData;
-import ru.multicabinet.module.api.PaymentGateway;
 import ru.multicabinet.module.api.ServerModule;
-import ru.multicabinet.module.option.ModuleOptionTemplate;
+import ru.multicabinet.module.option.MultiSelectValue;
+import ru.multicabinet.module.option.template.CheckboxModuleOptionTemplate;
+import ru.multicabinet.module.option.template.DropdownModuleOptionTemplate;
+import ru.multicabinet.module.option.template.ModuleOptionTemplate;
+import ru.multicabinet.module.option.template.PasswordModuleOptionTemplate;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -30,64 +34,292 @@ public class ExampleServerModuleService implements ServerModule, BundleActivator
     }
 
     @Override
-    public Map<String, Map<String, Object>> getAccountAccessParameters() {
-        Map<String, Map<String, Object>> accountAccessParams = new HashMap<String, Map<String, Object>>();
+    public List<ModuleOptionTemplate> getAccountAccessOptions() {
+        List<ModuleOptionTemplate> accountAccessOptions = new ArrayList<ModuleOptionTemplate>();
 
-        Map<String, Object> username = new HashMap<String, Object>();
-        username.put("type", "text");
-        username.put("desc", "Username");
-        username.put("validator", "/\\d/");
+        accountAccessOptions.add(new ModuleOptionTemplate() {
+            @Override
+            public String getOptionName() {
+                return "username";
+            }
 
-        Map<String, Object> password = new HashMap<String, Object>();
-        password.put("type", "password");
-        password.put("desc", "Password");
+            @Override
+            public String getDescription() {
+                return "Username";
+            }
 
-        accountAccessParams.put("username", username);
-        accountAccessParams.put("password", password);
+            @Override
+            public String getI18NDescriptionCode() {
+                return null;
+            }
 
-        return accountAccessParams;
+            @Override
+            public String getValidator() {
+                return "/\\d/";
+            }
+
+            @Override
+            public String getDefaultValue() {
+                return null;
+            }
+
+            @Override
+            public Boolean isRequired() {
+                return true;
+            }
+
+            @Override
+            public Boolean isAdminOnly() {
+                return null;
+            }
+        });
+
+        accountAccessOptions.add(new PasswordModuleOptionTemplate() {
+            @Override
+            public String getOptionName() {
+                return "password";
+            }
+
+            @Override
+            public String getDescription() {
+                return "Password";
+            }
+
+            @Override
+            public String getI18NDescriptionCode() {
+                return null;
+            }
+
+            @Override
+            public String getValidator() {
+                return null;
+            }
+
+            @Override
+            public String getDefaultValue() {
+                return null;
+            }
+
+            @Override
+            public Boolean isRequired() {
+                return true;
+            }
+
+            @Override
+            public Boolean isAdminOnly() {
+                return null;
+            }
+        });
+        return accountAccessOptions;
     }
 
     @Override
-    public Map<String, Map<String, Object>> getAccountDataParameters() {
-        Map<String, Map<String, Object>> accountData = new HashMap<String, Map<String, Object>>();
+    public List<ModuleOptionTemplate> getAccountOptions() {
+        List<ModuleOptionTemplate> accountOptions = new ArrayList<ModuleOptionTemplate>();
 
-        Map<String, Object> diskspace = new HashMap<String, Object>();
-        diskspace.put("type", "text");
-        diskspace.put("desc", "Disk space");
-        diskspace.put("validator", "/[0-9]+/");
+        accountOptions.add(new ModuleOptionTemplate() {
+            @Override
+            public String getOptionName() {
+                return "diskspace";
+            }
 
-        Map<String, Object> radiofield = new HashMap<String, Object>();
-        radiofield.put("type", "text");
-        radiofield.put("desc", "Checkbox");
+            @Override
+            public String getDescription() {
+                return "Disk space";
+            }
 
-        Map<String, Object> dropdownfield = new HashMap<String, Object>();
-        dropdownfield.put("type", "dropdown");
-        dropdownfield.put("desc", "Drop down");
-        Map<String, String> values = new HashMap<String, String>();
-        values.put("value1", "Value 1");
-        values.put("value2", "Value 2");
-        values.put("value3", "Value 3");
-        dropdownfield.put("values", values);
+            @Override
+            public String getI18NDescriptionCode() {
+                return null;
+            }
 
-        accountData.put("diskspace", diskspace);
-        accountData.put("radiofield", radiofield);
-        accountData.put("dropdownfield", dropdownfield);
+            @Override
+            public String getValidator() {
+                return "/[0-9]+/";
+            }
 
-        return accountData;
+            @Override
+            public String getDefaultValue() {
+                return null;
+            }
+
+            @Override
+            public Boolean isRequired() {
+                return false;
+            }
+
+            @Override
+            public Boolean isAdminOnly() {
+                return null;
+            }
+        });
+        accountOptions.add(new CheckboxModuleOptionTemplate() {
+            @Override
+            public Boolean isChecked() {
+                return true;
+            }
+
+            @Override
+            public String getOptionName() {
+                return "checkbox";
+            }
+
+            @Override
+            public String getDescription() {
+                return "Checkbox";
+            }
+
+            @Override
+            public String getI18NDescriptionCode() {
+                return null;
+            }
+
+            @Override
+            public String getValidator() {
+                return null;
+            }
+
+            @Override
+            public String getDefaultValue() {
+                return null;
+            }
+
+            @Override
+            public Boolean isRequired() {
+                return null;
+            }
+
+            @Override
+            public Boolean isAdminOnly() {
+                return null;
+            }
+        });
+
+        accountOptions.add(new DropdownModuleOptionTemplate() {
+            @Override
+            public List<MultiSelectValue> getValues() {
+                List<MultiSelectValue> values = new ArrayList<MultiSelectValue>();
+                values.add(new MultiSelectValue("value1", "Value 1"));
+                values.add(new MultiSelectValue("value2", "Value 2"));
+                values.add(new MultiSelectValue("value3", "Value 3"));
+                return values;
+            }
+
+            @Override
+            public String getOptionName() {
+                return "dropdown";
+            }
+
+            @Override
+            public String getDescription() {
+                return "Drop down";
+            }
+
+            @Override
+            public String getI18NDescriptionCode() {
+                return null;
+            }
+
+            @Override
+            public String getValidator() {
+                return null;
+            }
+
+            @Override
+            public String getDefaultValue() {
+                return null;
+            }
+
+            @Override
+            public Boolean isRequired() {
+                return null;
+            }
+
+            @Override
+            public Boolean isAdminOnly() {
+                return null;
+            }
+        });
+        return accountOptions;
     }
 
     @Override
-    public Map<String, Map<String, Object>> getServerAccessParameters() {
-        Map<String, Map<String, Object>> serverAccess = new HashMap<String, Map<String, Object>>();
-        Map<String, Object> ip = new HashMap<String, Object>();
-        ip.put("type", "text");
-        ip.put("desc", "Server IP");
+    public List<ModuleOptionTemplate> getServerAccessOptions() {
+        List<ModuleOptionTemplate> serverAccessOptions = new ArrayList<ModuleOptionTemplate>();
+        serverAccessOptions.add(new ModuleOptionTemplate() {
+            @Override
+            public String getOptionName() {
+                return "serverip";
+            }
 
-        Map<String, Object> port = new HashMap<String, Object>();
-        port.put("type")
+            @Override
+            public String getDescription() {
+                return "Server IP";
+            }
+
+            @Override
+            public String getI18NDescriptionCode() {
+                return null;
+            }
+
+            @Override
+            public String getValidator() {
+                return null;
+            }
+
+            @Override
+            public String getDefaultValue() {
+                return null;
+            }
+
+            @Override
+            public Boolean isRequired() {
+                return true;
+            }
+
+            @Override
+            public Boolean isAdminOnly() {
+                return null;
+            }
+        });
+        serverAccessOptions.add(new ModuleOptionTemplate() {
+            @Override
+            public String getOptionName() {
+                return "port";
+            }
+
+            @Override
+            public String getDescription() {
+                return "Port";
+            }
+
+            @Override
+            public String getI18NDescriptionCode() {
+                return null;
+            }
+
+            @Override
+            public String getValidator() {
+                return null;
+            }
+
+            @Override
+            public String getDefaultValue() {
+                return null;
+            }
+
+            @Override
+            public Boolean isRequired() {
+                return null;
+            }
+
+            @Override
+            public Boolean isAdminOnly() {
+                return null;
+            }
+        });
+        return serverAccessOptions;
     }
-
     @Override
     public List<ModuleOptionTemplate> getCustomOptions() {
         return null;  //To change body of implemented methods use File | Settings | File Templates.
