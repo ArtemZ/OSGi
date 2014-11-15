@@ -1,9 +1,15 @@
 package ru.multicabinet.servermodules.exampleserver;
 
 import org.osgi.framework.BundleActivator;
+import org.osgi.framework.BundleContext;
+import org.osgi.framework.ServiceRegistration;
+import ru.multicabinet.module.ServerModuleData;
+import ru.multicabinet.module.api.PaymentGateway;
 import ru.multicabinet.module.api.ServerModule;
+import ru.multicabinet.module.option.ModuleOptionTemplate;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -80,5 +86,47 @@ public class ExampleServerModuleService implements ServerModule, BundleActivator
 
         Map<String, Object> port = new HashMap<String, Object>();
         port.put("type")
+    }
+
+    @Override
+    public List<ModuleOptionTemplate> getCustomOptions() {
+        return null;  //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public String create(ServerModuleData serverModuleData) {
+        return null;  //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public void suspend(String s, ServerModuleData serverModuleData) {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public void terminate(String s, ServerModuleData serverModuleData) {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public void unsuspend(String s, ServerModuleData serverModuleData) {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public void update(String s, ServerModuleData serverModuleData) {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    private ServiceRegistration registration;
+
+    @Override
+    public void start(BundleContext bundleContext) throws Exception {
+        registration = bundleContext.registerService(ServerModule.class.getName(), this, null);
+    }
+
+    @Override
+    public void stop(BundleContext bundleContext) throws Exception {
+
     }
 }
