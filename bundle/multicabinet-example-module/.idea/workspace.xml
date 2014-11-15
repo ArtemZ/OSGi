@@ -17,7 +17,7 @@
     <file path="/Module.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415467140904" ignored="false" />
     <file path="/CurrencyRateModule.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415903669765" ignored="false" />
     <file path="/NotificationModule.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415904574821" ignored="false" />
-    <file path="/PaymentGateway.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415517456477" ignored="false" />
+    <file path="/PaymentGateway.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1416047566133" ignored="false" />
     <file path="$PROJECT_DIR$/../../../multicabinet-module-api/src/test/java/ru/multicabinet/module/PaymentModuleData.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415466394289" ignored="false" />
     <file path="/PaymentModuleData.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415468479276" ignored="false" />
     <file path="/ServerModule.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415518733458" ignored="false" />
@@ -47,20 +47,20 @@
     <file path="$PROJECT_DIR$/../../../multicabinet-module-api/src/main/java/module/ModuleType.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415466403332" ignored="false" />
     <file path="$PROJECT_DIR$/../../../multicabinet-module-api/src/main/java/module/PaymentModuleData.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415466403332" ignored="false" />
     <file path="$PROJECT_DIR$/../../../multicabinet-module-api/src/main/java/ru/multicabinet/module/api/ServerModule.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415518735240" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../multicabinet-module-api/src/main/java/ru/multicabinet/module/api/PaymentGateway.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415517681947" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../multicabinet-module-api/src/main/java/ru/multicabinet/module/api/PaymentGateway.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1416047594101" ignored="false" />
     <file path="$PROJECT_DIR$/../../../multicabinet-module-api/src/main/java/ru/multicabinet/module/api/NotificationModule.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415904574821" ignored="false" />
     <file path="$PROJECT_DIR$/../../../multicabinet-module-api/src/main/java/ru/multicabinet/module/ServerModuleData.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415903114847" ignored="false" />
     <file path="$PROJECT_DIR$/../../../multicabinet-module-api/src/main/java/ru/multicabinet/module/api/CurrencyRateModule.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415903669765" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../multicabinet-module-api/src/main/java/ru/multicabinet/module/DataHolder.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415810404175" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../multicabinet-module-api/src/main/java/ru/multicabinet/module/DataHolder.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1416047519245" ignored="false" />
     <file path="$PROJECT_DIR$/../../../multicabinet-module-api/src/main/java/ru/multicabinet/module/api/Module.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415467141693" ignored="false" />
     <file path="$PROJECT_DIR$/../../../multicabinet-module-api/src/main/java/ru/multicabinet/module/ModuleType.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415466425299" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../multicabinet-module-api/src/main/java/ru/multicabinet/module/PaymentModuleData.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415468482135" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../multicabinet-module-api/src/main/java/ru/multicabinet/module/PaymentModuleData.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1416047420795" ignored="false" />
     <file path="/ExampleServerModuleService.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415521819650" ignored="false" />
     <file path="$PROJECT_DIR$/../../../multicabinet-module-api/src/main/java/ru/multicabinet/module/option/ModuleOptionTemplate.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415550774834" ignored="false" />
     <file path="/ModuleOptionTemplate.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415550772703" ignored="false" />
     <file path="$PROJECT_DIR$/../../../multicabinet-module-api/src/main/java/ru/multicabinet/module/option/ModuleOption.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415552105964" ignored="false" />
     <file path="/ModuleOption.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415552105964" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../multicabinet-module-api/src/main/java/ru/multicabinet/module/CurrencyRateModuleData.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415561186902" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../multicabinet-module-api/src/main/java/ru/multicabinet/module/CurrencyRateModuleData.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1416047754555" ignored="false" />
     <file path="/CurrencyRateModuleData.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415561185669" ignored="false" />
     <file path="$PROJECT_DIR$/../../../socksmanager/grails-app/views/hostGroup/list.gsp" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415639457498" ignored="false" />
     <file path="/list.gsp" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415639457498" ignored="false" />
@@ -69,8 +69,8 @@
     <file path="$PROJECT_DIR$/../../../socksmanager/grails-app/controllers/com/socksmanager/ssh/SshHostController.groovy" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415649684417" ignored="false" />
     <file path="/SshHostController.groovy" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415649672614" ignored="false" />
     <file path="/ServerModuleData.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415903113117" ignored="false" />
-    <file path="/DataHolder.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415810403858" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../multicabinet-module-api/src/main/java/ru/multicabinet/module/NotificationModuleData.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415904603276" ignored="false" />
+    <file path="/DataHolder.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1416047510711" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../multicabinet-module-api/src/main/java/ru/multicabinet/module/NotificationModuleData.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1416047344381" ignored="false" />
     <file path="/NotificationModuleData.java" changelist="0cafc7ec-6840-48a0-b6b3-0dd8c91827b9" time="1415904600677" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
