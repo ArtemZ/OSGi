@@ -24,7 +24,7 @@ public class ExampleGatewayService implements PaymentGateway, BundleActivator {
 
     public Map<String, Object> getInfo(){
         Map<String, Object> info = new HashMap<String, Object>();
-        info.put("name", "exmaple");
+        info.put("name", "example");
         info.put("fullname", "Exmaple Payment Gateway");
         info.put("version", "1.0");
 

@@ -6,6 +6,7 @@
 
     <groupId>ru.multicabinet.gateways</groupId>
     <artifactId>example-gateway</artifactId>
+    <packaging>bundle</packaging>
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
@@ -35,11 +36,12 @@
                 <configuration>
                     <instructions>
                         <!--<Export-Package>ru.artemz.test.impl</Export-Package>-->
-                        <!--<Private-Package>ru.artemz.test.impl</Private-Package>-->
-                        <Import-Package>ru.multicabinet.module</Import-Package>
-                        <Import-Package>ru.multicabinet.module.api</Import-Package>
+                        <Bundle-Category>gateway, servermodule</Bundle-Category>
+                        <Bundle-Description>An example multicabinet module</Bundle-Description>
+                        <Import-Package>ru.multicabinet.module; org.osgi.framework</Import-Package>
                         <Bundle-SymbolicName>ru.multicabinet.gateways.example-gateway</Bundle-SymbolicName>
-                        <!--<Bundle-Activator>ru.artemz.test.impl.Activator</Bundle-Activator>-->
+                        <Bundle-Activator>ru.multicabinet.gateways.examplegateway.ExampleGatewayService</Bundle-Activator>
+                        <Bundle-Activator>ru.multicabinet.servermodules.exampleserver.ExampleServerModuleService</Bundle-Activator>
                     </instructions>
                 </configuration>
             </plugin>

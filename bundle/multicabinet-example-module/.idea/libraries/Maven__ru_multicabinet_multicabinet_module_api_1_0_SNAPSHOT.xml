@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: ru.multicabinet:multicabinet-module-api:1.0-SNAPSHOT">
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/ru/multicabinet/multicabinet-module-api/1.0-SNAPSHOT/multicabinet-module-api-1.0-20141114.094205-4.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/ru/multicabinet/multicabinet-module-api/1.0-SNAPSHOT/multicabinet-module-api-1.0-20141123.091019-1.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$MAVEN_REPOSITORY$/ru/multicabinet/multicabinet-module-api/1.0-SNAPSHOT/multicabinet-module-api-1.0-20141114.094205-4-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/ru/multicabinet/multicabinet-module-api/1.0-SNAPSHOT/multicabinet-module-api-1.0-20141123.091019-1-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$MAVEN_REPOSITORY$/ru/multicabinet/multicabinet-module-api/1.0-SNAPSHOT/multicabinet-module-api-1.0-20141114.094205-4-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/ru/multicabinet/multicabinet-module-api/1.0-SNAPSHOT/multicabinet-module-api-1.0-20141123.091019-1-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
