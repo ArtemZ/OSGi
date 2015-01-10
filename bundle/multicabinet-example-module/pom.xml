@@ -28,17 +28,26 @@
     </dependencies>
 
     <build>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-ssh</artifactId>
+                <version>RELEASE</version>
+            </extension>
+        </extensions>
         <plugins>
             <plugin>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-bundle-plugin</artifactId>
                 <extensions>true</extensions>
+
                 <configuration>
+                    <remoteOBR>obr-repo</remoteOBR>
                     <instructions>
                         <!--<Export-Package>ru.artemz.test.impl</Export-Package>-->
-                        <Bundle-Category>gateway, servermodule</Bundle-Category>
+                        <Bundle-Category>gateway, server</Bundle-Category>
                         <Bundle-Description>An example multicabinet module</Bundle-Description>
-                        <Import-Package>ru.multicabinet.module; ru.multicabinet.module.api; org.osgi.framework</Import-Package>
+                        <Import-Package>ru.multicabinet.module, ru.multicabinet.module.api, org.osgi.framework</Import-Package>
                         <Bundle-SymbolicName>ru.multicabinet.gateways.example-gateway</Bundle-SymbolicName>
                         <Bundle-Activator>ru.multicabinet.gateways.examplegateway.ExampleGatewayService</Bundle-Activator>
                         <Bundle-Activator>ru.multicabinet.servermodules.exampleserver.ExampleServerModuleService</Bundle-Activator>
@@ -47,5 +56,13 @@
             </plugin>
         </plugins>
     </build>
-    
+    <distributionManagement>
+        <snapshotRepository>
+            <id>obr-repo</id>
+            <name>obr.multicabinet.com</name>
+            <url>
+                scp://artemz@private.netdedicated.ru/home/artemz/www/obr.multicabinet.com/ROOT
+            </url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
