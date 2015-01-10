@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>ru.multicabinet.currency</groupId>
+    <artifactId>cbr</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>bundle</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>ru.multicabinet</groupId>
+            <artifactId>multicabinet-module-api</artifactId>
+            <version>1.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.core</artifactId>
+            <version>4.3.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.compendium</artifactId>
+            <version>4.3.1</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.4</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-ssh</artifactId>
+                <version>RELEASE</version>
+            </extension>
+        </extensions>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+
+                <configuration>
+                    <remoteOBR>obr-repo</remoteOBR>
+                    <instructions>
+                        <!--<Export-Package>ru.artemz.test.impl</Export-Package>-->
+                        <Bundle-Category>currency</Bundle-Category>
+                        <Bundle-Description>This module provides currency rates from Central Bank of Russia</Bundle-Description>
+                        <Import-Package>
+                            ru.multicabinet.module,
+                            ru.multicabinet.module.api,
+                            org.osgi.framework,
+                            javax.xml.parsers,
+                            org.w3c.dom
+                        </Import-Package>
+                        <Bundle-SymbolicName>ru.multicabinet.currency.cbr</Bundle-SymbolicName>
+                        <Bundle-Activator>ru.multicabinet.currency.defaultcurrencymodules.CbrCurrencyService</Bundle-Activator>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>obr-repo</id>
+            <name>obr.multicabinet.com</name>
+            <url>
+                scp://artemz@private.netdedicated.ru/home/artemz/www/obr.multicabinet.com/ROOT
+            </url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    
+</project>
